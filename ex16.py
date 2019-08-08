@@ -9,7 +9,7 @@ print("If you do want that, hit RETURN.")
 input("?")
 
 print("Opening the file...")
-target = open(filename, 'w')
+target = open(filename, 'w+')
 
 print("Truncating the file. Goodbye!")
 target.truncate()
@@ -22,12 +22,12 @@ line3= input("line3: ")
 
 print("I'm going to write these to the file.")
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+target.write(line1+ f"\n" + line2 + f"\n" + line3 + f"\n")
+#target.write("\n")
+#target.write(line2)
+#target.write("\n")
+#target.write(line3)
+#target.write("\n")
 
 print("And finally, we close it.")
 target.close()
